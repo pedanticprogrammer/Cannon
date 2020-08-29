@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1-stretch AS build
 WORKDIR /src
-COPY ["Cannon/Cannon.csproj", "Cannon/"]
+COPY ["Cannon.csproj", "Cannon/"]
 RUN dotnet restore "Cannon/Cannon.csproj"
 COPY . .
 WORKDIR "/src/Cannon"
