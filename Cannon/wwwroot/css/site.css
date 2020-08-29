@@ -1,0 +1,279 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.custom {
+    width: 1000px;
+    margin: auto;
+}
+
+.left{
+    margin-right: auto;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+#canvas-div {
+    display: flex;
+}
+
+#myCanvas {
+    flex-shrink: 0;
+    flex-grow: .4;
+    margin: auto;
+    width: 1000px;
+    height: 700px;
+    border: solid;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.info-boxes {
+    font-size: 20px;
+    border: 3px solid #34372f;
+    border-radius: 10px;
+    padding: 7px;
+    text-align: left;
+    margin: 10px;
+    color: white;
+}
+
+#readyFire {
+  text-align: center;
+}
+
+#reset-div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Options Group */
+.options {
+    font-weight: bold; 
+    background-color: #ADADAD;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding-bottom: 5px;
+}
+
+/* Individual Option */
+.option{
+    margin-bottom: 8px;
+}
+
+.modal-alert {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Draw on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-wrapper {
+    text-align: left;
+    position: relative;
+    background-color: black;
+    border-radius: 20px;
+    margin: 15% auto;
+    padding: 0;
+    border-radius: 25px;
+    border: 1px solid black;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Modal Header */
+.modal-header {
+    color: white;
+    text-align: center;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+/* Modal Body */
+.modal-body{
+    text-align: center;
+    color: white;
+}
+
+
+/* Modal Footer */
+.modal-footer {
+    color: white;
+    text-align: left;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Disable Defualt Slider Appearance*/
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 9px 0;
+}
+
+.slider:focus {
+    outline: none;
+}
+
+
+/*Slider for Chrome Engine*/
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #000000, 0px 0px 1px #0d0d0d;
+    background: #f0f0f0;
+    border-radius: 25px;
+    border: 1px solid #010101;
+}
+
+.slider::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 25px;
+    width: 17px;
+    border-radius: 50px;
+    background: #1eb24d;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+.slider:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+}
+
+/*Slider for Firefox Engine*/
+.slider::-moz-range-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #000000, 0px 0px 1px #0d0d0d;
+    background: #f0f0f0;
+    border-radius: 25px;
+    border: 1px solid #010101;
+}
+
+.slider::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 25px;
+    width: 17px;
+    border-radius: 50px;
+    background: #1eb24d;
+    cursor: pointer;
+}
+
+.slider:disabled {
+    opacity: .2;
+}
+
+#checkbox-text {
+    padding-left: 14px;
+    display: inline;
+}
+
+.checkboxLabel {
+    display: inline;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide default checkbox */
+.checkboxLabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: -1px;
+    left: 15px;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+}
+
+.checkboxLabel:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkboxLabel input:checked ~ .checkmark {
+    background-color: #1eb24d;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxLabel input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkboxLabel .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 

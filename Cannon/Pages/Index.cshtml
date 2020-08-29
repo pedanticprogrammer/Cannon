@@ -1,0 +1,92 @@
+﻿@page
+@model IndexModel
+
+<div id="canvas-div">
+    <canvas id="myCanvas"></canvas>
+</div>
+
+<div class="container">
+    <div id="optionsRow" class="row">
+        <br />
+
+        <div class="options col-sm-3">
+            <div class="option container-fluid">
+                Ball Speed: <span id="bSpeedText" class="num"></span><input type="range" min="4" max="20" id="bSpeed" class="slider tgl">
+            </div>
+            <div class="option container-fluid">
+                Ball Size: <span id="bSizeText" class="num"></span><input type="range" min="5" max="15" id="bSize" class="slider tgl"/>
+            </div>
+            <div class="option container-fluid">
+                Target Speed: <span id="tSpeedText" class="num"></span><input type="range" min="2" max="10" id="tSpeed" class="slider tgl"/>
+            </div>
+            <div class="option container-fluid">
+                Target Size: <span id="tSizeText" class="num"></span><input type="range" min="4" max="15" id="tSize" class="slider tgl"/>
+            </div>
+        </div>
+
+        <div class="col-sm-1">
+        </div>
+
+        <div id="info-col" class="col-sm-3">
+            <div id="readyFire" class="info-boxes">
+            </div>
+            <div class="info-boxes info-part">
+                Ammo: <span id="ammo"></span>
+            </div>
+            <div class="info-boxes info-part">
+                Score: <span id="score"></span>
+            </div>
+
+            <div id="reset-div">
+                <button id="reset-button" type="button" class="btn btn-danger btn-lg">Reset</button>
+            </div>
+        </div>
+
+        <div class="col-sm-1">
+        </div>
+
+        <div class="options col-sm-3">
+            <div class="option container-fluid">
+                <div class="form-group">
+                    <label for="theme">Select Theme:</label>
+                    <select class="form-control tgl" id="theme"></select>
+                </div>
+            </div>
+            <div class="option container-fluid">
+                    <p id="checkbox-text">
+                        Draw Dashes:
+                    </p>
+                    <label class="checkboxLabel">
+                        <input id="drawDashes" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+            </div>
+            <div class="option container-fluid">
+                <div class="option container-fluid">
+                    Dash Length: <span id="dashLengthText" class="num"></span><input type="range" min="5" max="60" id="dashLength" class="slider" />
+                </div>
+            </div>
+            <div class="option container-fluid">
+                <div class="option container-fluid">
+                    Dash Spacing: <span id="dashSpaceText" class="num"></span><input type="range" min="5" max="60" id="dashSpace" class="slider" />
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="alert" class="modal-alert">
+    <!-- Modal content -->
+    <div class="modal-wrapper">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Game Over!</h2>
+        </div>
+        <div class="modal-body">
+            <h4></h4>
+        </div>
+        <div class="modal-footer">
+            <h4>Disclaimer:</h4>
+            <p>Names, characters, places and incidents either are products of the author’s imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.</p>
+        </div>
+    </div>
+</div>
