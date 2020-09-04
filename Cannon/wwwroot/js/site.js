@@ -193,6 +193,7 @@ function loadOptions(game, images) {
     //Initialize Ready to fire button
     var ready = document.getElementById("readyFire");
     ready.innerHTML = "Click to Start";
+    ready.innerHTML = window.location.href.concat("   :::   ",path);
     ready.style.backgroundColor = "green";
 
     //Initialize close button on alert
