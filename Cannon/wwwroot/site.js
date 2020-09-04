@@ -143,7 +143,7 @@ function animated(images, ctx, canvas, game) {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     canvas.width = canvas.clientWidth;
-    $('#myCanvas').css('background-image', 'url("../'.concat(images[game.theme][3].path, '")'));
+    $('#myCanvas').css('background-image', images[game.theme][3].path));
     $('#body').css('background-color', colors[game.theme]);
 
     ctx.save();
