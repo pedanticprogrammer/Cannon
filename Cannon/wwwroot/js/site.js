@@ -98,9 +98,11 @@ function loadImages(ctx, canvas) {
  * @param {Object} game
  */
 function loadOptions(game, images) {
+    var urlpath = window.location.pathname;
+
     //Initialize theme
     $('#body').css('background-color', colors[game.theme]);
-    $('#myCanvas').css('background-image', 'url("../'.concat(images[game.theme][3].path, '")'));
+    $('#myCanvas').css('background-image', 'url("../'.concat(urlpath, images[game.theme][3].path, '")'));
     $('.info-part').css('background-color', shadeColor2(colors[game.theme], -.5));
    
     //Dropdown to select theme
@@ -113,7 +115,7 @@ function loadOptions(game, images) {
     drop.change(function () {
         game.theme = parseInt($(this).find('option:selected').attr("data-val"));
         $('#body').css('background-color', colors[game.theme]);
-        $('#myCanvas').css('background-image', 'url("../'.concat(images[game.theme][3].path, '")'));
+        $('#myCanvas').css('background-image', 'url("../'.concat(urlpath, images[game.theme][3].path, '")'));
         $('.info-part').css('background-color', shadeColor2(colors[game.theme], -.5));
     });
 
