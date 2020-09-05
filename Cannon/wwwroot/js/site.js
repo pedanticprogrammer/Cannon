@@ -15,7 +15,6 @@ window.requestAnimFrame = (function (callback) {
 })();
 
 //Global variables
-var urlpath = window.location.pathname;
 var mousePos = { x: 0, y: 0 };
 var themes = ["Default", "Kirby", "Mario","Pokemon","Duck Hunt", "Stormtrooper", "Metroid"];
 var offsets = [-152, 210, 175, 185, -135, 180, -180];
@@ -99,6 +98,7 @@ function loadImages(ctx, canvas) {
  * @param {Object} game
  */
 function loadOptions(game, images) {
+    var urlpath = window.location.pathname;
 
     //Initialize theme
     $('#body').css('background-color', colors[game.theme]);
@@ -192,7 +192,6 @@ function loadOptions(game, images) {
     //Initialize Ready to fire button
     var ready = document.getElementById("readyFire");
     ready.innerHTML = "Click to Start";
-    ready.innerHTML = window.location.href.concat("   :::   ",urlpath);
     ready.style.backgroundColor = "green";
 
     //Initialize close button on alert
